@@ -13,21 +13,21 @@ def initial():
     pobl_parents = []
     perm_array = range(num_queens)
     for i in range(tam_pobl):
-        cromosome = list(np.random.permutation(perm_array))
-        fitness = evalua(cromosome)
-        pobl_parents.append([fitness, cromosome])
+        chromosome = list(np.random.permutation(perm_array))
+        fitness = evalua(chromosome)
+        pobl_parents.append([fitness, chromosome])
     prom_fit, desv_std = prom_fitness(pobl_parents)
     fit_prom.append(prom_fit)
     fit_desv_std.append(desv_std)
     return pobl_parents
 
-def evalua(cromosome):
+def evalua(chromosome):
     global counter_eval
     counter_eval += 1
     aux_fitness = 0
-    for i in range(len(cromosome)):
+    for i in range(len(chromosome)):
         for j in range(i + 1, num_queens):
-            if abs(i - j) == abs(cromosome[i] - cromosome[j]):
+            if abs(i - j) == abs(chromosome[i] - chromosome[j]):
                 aux_fitness += 1
     return aux_fitness
 
