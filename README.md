@@ -1,2 +1,2 @@
 # Algorithms, algorithms and more algorithms
-General repository of algorithms of all kind of flavors. Personal space to store personal codes.
+General repository with algorithms of all kind of flavors. This is a personal space to store my codes (:
